@@ -1,5 +1,6 @@
 // src/components/shared_components/button_component/Button.tsx
 import React from 'react';
+import './button.css'
 
 interface ButtonProps {
   onClick?: (event?: React.FormEvent<HTMLButtonElement>) => void;

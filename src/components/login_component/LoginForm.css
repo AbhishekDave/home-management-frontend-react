@@ -1,15 +1,18 @@
 /* LoginForm.css */
 
 .login-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 400px;
-    margin: 50px auto;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  padding: 40px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 10px; /* Increased border radius */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #282c34; /* Darker background */
+  color: #fff; /* White text */
+}
   
   .login-page header {
     margin-bottom: 20px;
@@ -29,15 +32,14 @@
   
   .login-form input,
   .login-form button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    width: 100%;
+    padding: 12px 20px; /* Increased padding */
+    border: 1px solid #444; /* Darker border */
+    background-color: #333; /* Darker background */
+    color: #fff; /* White text */
   }
   
   .login-form button {
-    background-color: #4CAF50; /* Adjust color as needed */
+    background-color: #4caf50; /* Adjust color as needed */
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
@@ -46,10 +48,52 @@
   .login-form button:hover {
     background-color: #3e8e41; /* Adjust hover color as needed */
   }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+  .login-form input:focus {
+    outline: none;
+    border-color: #666; /* Adjust as needed */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   
+  .login-form input.error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: #ff0000; /* Or another contrasting color */
+    font-weight: bold;
+    font-size: 16px; /* Adjust as needed */
+    margin-bottom: 10px;
+  }
+
+  .loading-message {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .signup-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .a {
+    font-weight: 500;
+    color: #a7a206;
+    text-decoration: inherit;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 2s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

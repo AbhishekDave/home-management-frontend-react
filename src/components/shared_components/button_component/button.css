@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: light) {
+    button {
+        background-color: #dddddd;
+        margin-top: 15px;
+    }
+}
