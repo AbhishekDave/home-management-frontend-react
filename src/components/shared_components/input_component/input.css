@@ -1,0 +1,19 @@
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Ensures full width on all screens */
+  padding: 15px 20px; /* Fixed pixel padding for consistent input size */
+  margin: 10px 0; /* Margin between inputs */
+  font-size: 16px; /* Fixed font size for readability */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Specific media query for smaller screens (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px 15px; /* Reduce padding on smaller screens */
+    font-size: 14px; /* Reduce font size on smaller screens */
+  }
+}
