@@ -1,0 +1,102 @@
+/* RegisterForm.css */
+
+.register-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    padding: 40px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #282c34; /* Darker background */
+    color: #fff; /* White text */
+  }
+    
+    .register-page header {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .register-page h1 {
+      font-size: 2em;
+      margin-bottom: 0;
+    }
+    
+    .register-form {
+      display: flow;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .register-form input,
+    .register-form button {
+      padding: 12px 20px; /* Increased padding */
+      border: 1px solid #444; /* Darker border */
+      background-color: #333; /* Darker background */
+      color: #fff; /* White text */
+    }
+    
+    .register-form button {
+      background-color: #4caf50; /* Adjust color as needed */
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    
+    .register-form button:hover {
+      background-color: #3e8e41; /* Adjust hover color as needed */
+    }
+  
+    .register-form input:focus {
+      outline: none;
+      border-color: #666; /* Adjust as needed */
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .register-form input.error {
+      border-color: red;
+    }
+    
+    .error-message {
+      color: #ff0000; /* Or another contrasting color */
+      font-weight: bold;
+      font-size: 16px; /* Adjust as needed */
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding-top: 14px;
+    }
+  
+    .loading-message {
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .signup-link {
+      color: #fff;
+      text-decoration: underline;
+    }
+  
+    .a {
+      font-weight: 500;
+      color: #a7a206;
+      text-decoration: inherit;
+  }
+  
+  .loader {
+    width: 20px;
+    height: 20px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

@@ -48,28 +48,35 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className="login-page">
-      <header>
-        <h1>HomeezyPro</h1>
-        <p>Plan Yourself Easy</p>
-      </header>
-      <LoginForm onLogin={handleLogin} /> {/* Passing handleLogin as a prop */}
-      {error && <p className="error-message">{error}</p>}{" "}
-      {/* Display error message */}
-      {isLoading && (
-        <div className="loading">
-          <div className="loader"
-          ></div>
-        </div>
-      )}
-      {/* {isLoading && <p className="loading-message">Logging in, Please Wait...</p>}  Show loading state */}
-      <p>
-        New user?{" "}
-        <a href="/register" className="signup-link">
-          Sign Up
-        </a>
-      </p>
+        <header>
+            <h1>HomeezyPro</h1>
+            <p>Plan Yourself Easy</p>
+        </header>
+        <LoginForm onLogin={handleLogin} /> {/* Passing handleLogin as a prop */}
+        
+        {/* Display loading and error message together */}
+        {isLoading && (
+            <div className="loading">
+              {error && <p className="error-message">{error}</p>}
+                <div className="loader"></div>
+            </div>
+        )}
+        
+        {/* Display error message separately if not loading */}
+        {!isLoading && error && <p className="error-message">{error}</p>}
+        
+        {/* Show loading state message */}
+        {/* {isLoading && <p className="loading-message">Logging in, Please Wait...</p>} */}
+        
+        <p>
+            New user?{" "}
+            <a href="/register" className="signup-link">
+                Sign Up
+            </a>
+        </p>
     </div>
-  );
+);
+
 };
 
 export default LoginPage;
