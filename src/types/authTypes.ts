@@ -18,5 +18,6 @@ export interface RegisterData {
   }
 
 export interface RegisterResponse {
+  access_token: string;
   message: string;
 }

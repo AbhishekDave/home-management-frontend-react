@@ -19,7 +19,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='login-form' onSubmit={handleSubmit}>
       <Input type="text" value={credential} onChange={(e) => setUsername(e.target.value)} placeholder="Username or Email" />
       <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
       {error && <p>{error}</p>}
@@ -27,5 +27,5 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     </form>
   );
 };
-
+  
 export default LoginForm;
